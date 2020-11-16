@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPF_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="500">
+    
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Click="Button_Click" Name="ButtonSeven" Grid.Row="1" Grid.Column="0" Content="7" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonEight" Grid.Row="1" Grid.Column="1" Content="8" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonNine" Grid.Row="1" Grid.Column="2" Content="9" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonFour" Grid.Row="2" Grid.Column="0" Content="4" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonFive" Grid.Row="2" Grid.Column="1" Content="5" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonSix" Grid.Row="2" Grid.Column="2" Content="6" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonOne" Grid.Row="3" Grid.Column="0" Content="1" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonTwo" Grid.Row="3" Grid.Column="1" Content="2" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonThree" Grid.Row="3" Grid.Column="2" Content="3" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonZero" Grid.Row="4" Grid.Column="0" Content="0" FontSize="52" Grid.ColumnSpan="2"/>
+
+        <Button Click="Button_Click" Name="ButtonMultiplikation" Grid.Row="1" Grid.Column="3" Content="*" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonMinus" Grid.Row="2" Grid.Column="3" Content="-" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonPlus" Grid.Row="3" Grid.Column="3" Content="+" FontSize="52"/>
+        <Button Click="Button_Click" Name="ButtonDivide" Grid.Row="4" Grid.Column="2" Content="/" FontSize="52"/>
+        <Button Name="ButtonCE" Grid.Row="0" Grid.Column="3" Content="CE" FontSize="52" Background="#ffaf47"/>
+        <Button Name="ButtonEquals" Grid.Row="4" Grid.Column="3" Content="=" FontSize="52" Background="LightBlue"/>
+        
+
+        <TextBlock Name="MyTextBlock" Grid.ColumnSpan="3" Margin="10,5,10,5" FontSize="50"/>
+
+    </Grid>
+</Window>
