@@ -21,12 +21,42 @@ namespace WPF_Calculator
     public partial class MainWindow : Window
     {
 
-        long number1 = 0;
-        long number2 = 0;
-        string operation = "";
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Enter_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyTextBlock.Text.Contains('+'))
+            {
+                var tal1 = Convert.ToDouble(MyTextBlock.Text.Split('+')[0]);
+                var tal2 = Convert.ToDouble(MyTextBlock.Text.Split('+')[1]);
+                var summa = tal1 + tal2;
+                MyTextBlock.Text = summa + "";
+            }
+            else if (MyTextBlock.Text.Contains('-'))
+            {
+                var tal1 = Convert.ToDouble(MyTextBlock.Text.Split('-')[0]);
+                var tal2 = Convert.ToDouble(MyTextBlock.Text.Split('-')[1]);
+                var summa = tal1 - tal2;
+                MyTextBlock.Text = summa + "";
+            }
+            else if (MyTextBlock.Text.Contains('/'))
+            {
+                var tal1 = Convert.ToDouble(MyTextBlock.Text.Split('/')[0]);
+                var tal2 = Convert.ToDouble(MyTextBlock.Text.Split('/')[1]);
+                var summa = tal1 / tal2;
+                MyTextBlock.Text = summa + "";
+            }
+            else if (MyTextBlock.Text.Contains('*'))
+            {
+                var tal1 = Convert.ToDouble(MyTextBlock.Text.Split('*')[0]);
+                var tal2 = Convert.ToDouble(MyTextBlock.Text.Split('*')[1]);
+                var summa = tal1 * tal2;
+                MyTextBlock.Text = summa + "";
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -39,12 +69,13 @@ namespace WPF_Calculator
                     case "*":
                     case "/":
                     case "-":
-                        if (MyTextBlock.Text.Contains("+") || MyTextBlock.Text.Contains("-") ||  MyTextBlock.Text.Contains("*") || MyTextBlock.Text.Contains("/"))
+                        if (MyTextBlock.Text.Contains("+") || MyTextBlock.Text.Contains("-") || MyTextBlock.Text.Contains("*") || MyTextBlock.Text.Contains("/"))
                         {
                             break;
                         }
                         MyTextBlock.Text += button.Content;
                         break;
+
                     case "0":
                     case "1":
                     case "2":
@@ -55,10 +86,16 @@ namespace WPF_Calculator
                     case "7":
                     case "8":
                     case "9":
+
+
                         MyTextBlock.Text += button.Content;
                         break;
+
+                    case "CE":
+                        MyTextBlock.Text = "";
+                        break;
                     default:
-                        MyTextBlock.Text += " OUF";
+                        MyTextBlock.Text += "";
                         break;
                 }
 

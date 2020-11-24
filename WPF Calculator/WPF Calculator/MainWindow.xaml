@@ -8,7 +8,7 @@
         Title="MainWindow" Height="750" Width="500">
     
     
-    <Grid>
+    <Grid Background="DarkGray">
         
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -19,6 +19,7 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -39,8 +40,8 @@
         <Button Click="Button_Click" Name="ButtonMinus" Grid.Row="2" Grid.Column="3" Content="-" FontSize="52"/>
         <Button Click="Button_Click" Name="ButtonPlus" Grid.Row="3" Grid.Column="3" Content="+" FontSize="52"/>
         <Button Click="Button_Click" Name="ButtonDivide" Grid.Row="4" Grid.Column="2" Content="/" FontSize="52"/>
-        <Button Name="ButtonCE" Grid.Row="0" Grid.Column="3" Content="CE" FontSize="52" Background="#ffaf47"/>
-        <Button Name="ButtonEquals" Grid.Row="4" Grid.Column="3" Content="=" FontSize="52" Background="LightBlue"/>
+        <Button Click="Button_Click" Name="ButtonCE" Grid.Row="0" Grid.Column="3" Content="CE" FontSize="52" Background="#ffaf47"/>
+        <Button Click="Enter_Click" Name="ButtonEquals" Grid.Row="4" Grid.Column="3" Content="=" FontSize="52" Background="LightBlue"/>
         
 
         <TextBlock Name="MyTextBlock" Grid.ColumnSpan="3" Margin="10,5,10,5" FontSize="50"/>
